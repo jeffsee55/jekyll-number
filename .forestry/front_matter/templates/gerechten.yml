@@ -31,3 +31,5 @@ fields:
   config:
     required: false
   label: sub-category
+pages:
+- collections/_gerechten/en/lunch/warm/2-kroketten-met-brood-mosterd.md
