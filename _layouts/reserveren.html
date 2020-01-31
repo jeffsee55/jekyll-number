@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html  lang="{{ page.lang }}" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html lang="{{ page.lang }}">
+<!--<![endif]-->
+
+{%- include head.html -%}
+
+<body>
+
+    {%- include header.html -%}
+
+    <div class="header-title ken-burn white"
+        style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), hsla(0, 0%, 0%, 0.2)), url({{ page.headerImage }});">
+        <div class="container">
+            <div class="title-base">
+                <hr class="anima" />
+                <h1>{{ page.heading }}</h1>
+                <p>{{ page.subheading }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-bg-color overflow-visible">
+        <div class="container content">
+            <row>
+                <iframe src="https://reserveringen.lesdeuxponts.nl/" width="100%" height="425"></iframe>
+            </row>
+            <hr class="space">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>{{ site.data.translations['warning'][page.lang] }}</h2>
+                    <hr>
+                </div>
+                <hr class="space s" />
+                <div class="col-sm-6">
+                    {{ page.warningOne }}
+                </div>
+                <div class="col-sm-6">
+                    {{ page.warningTwo }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <i class="scroll-top scroll-top-mobile show fa fa-sort-asc"></i>
+
+    {%- include footer.html-%}
+
+</body>
+
+</html>

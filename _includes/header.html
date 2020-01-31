@@ -1,0 +1,120 @@
+{% gtm body %}
+
+<div id="preloader"></div>
+<div class="footer-parallax-container">
+    <header class="fixed-top scroll-change wide-area" data-menu-anima="fade-in">
+        <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
+            <div class="navbar navbar-main">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="/{{ page.lang }}/">
+                            <img class="logo-default scroll-hide" src="/assets/images/logo-01.png" alt="logo" />
+                            <img class="logo-default scroll-show" src="/assets/images/logo-01.png" alt="logo" />
+                            <img class="logo-retina" src="/assets/images/logo-01.png" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        {% if page.lang == 'nl' %}
+                        <ul class="nav navbar-nav">
+                            {% for item in site.menus.headerNL %}
+                            {% if item.children %}
+                            <li class="menu-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="/nl{{ item.url }}"
+                                    title="Go to {{ item.title }}" role="button">{{ item.title }}
+                                    <span class="caret"></span></a>
+                                <div class="mega-menu dropdown-menu multi-level row">
+                                    <div class="col">
+                                        <ul class="fa-ul no-icons text-s">
+                                            {% for item in item.children | limit: 5 %}
+                                            <li><a href="{{ item.url }}"
+                                                    title="Go to {{ item.title }}">{{ item.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li class="menu-item">
+                                <a href="/nl{{ item.url }}" title="Go to {{ item.title }}"
+                                    role="button">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        {% if page.lang == 'en' %}
+                        <ul class="nav navbar-nav">
+                            {% for item in site.menus.headerEN %}
+                            {% if item.children %}
+                            <li class="menu-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="/en{{ item.url }}"
+                                    title="Go to {{ item.title }}" role="button">{{ item.title }}
+                                    <span class="caret"></span></a>
+                                <div class="mega-menu dropdown-menu multi-level row">
+                                    <div class="col">
+                                        <ul class="fa-ul no-icons text-s">
+                                            {% for item in item.children | limit: 5 %}
+                                            <li><a href="{{ item.url }}"
+                                                    title="Go to {{ item.title }}">{{ item.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li class="menu-item">
+                                <a href="/en{{ item.url }}" title="Go to {{ item.title }}"
+                                    role="button">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <div class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav lan-menu">
+                                {% if page.lang == 'en' %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                        role="button">{{ site.data.languages.en.icon }}{{ site.data.languages.en.label }}
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        {% assign translations=site.pages | where:"lang-ref", page.lang-ref %}
+                                        {% if translations.size >= 1 %}
+                                        {% for post in translations %}
+
+                                        <li><a href="{{ site.base-url }}{{ post.url }}" class="{{ post.lang }}"
+                                                title="View in {{page.lang}}">{{ site.data.languages.[post.lang].icon }}{{ post.lang }}</a>
+                                        </li>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                {% if page.lang == 'nl' %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                        role="button">{{ site.data.languages.nl.icon }}{{ site.data.languages.nl.label }}
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        {% assign posts=site.pages | where:"lang-ref", page.lang-ref %}
+                                        {% if posts.size >= 1 %}
+                                        {% for post in posts %}
+
+                                        <li><a href="{{ site.base-url }}{{ post.url }}" class="{{ post.lang }}"
+                                                title="View in {{page.lang}}">{{ site.data.languages.[post.lang].icon }}{{ post.lang }}</a>
+                                        </li>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

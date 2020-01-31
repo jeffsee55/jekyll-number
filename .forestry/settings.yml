@@ -1,0 +1,56 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: "/admin/"
+webhook_url: 
+sections:
+- type: heading
+  label: Pages
+- type: directory
+  path: en
+  label: English
+  create: all
+  match: "**/*"
+- type: directory
+  path: nl
+  label: Nederland
+  create: all
+  match: "**/*"
+- type: heading
+  label: Collections
+- type: directory
+  path: collections/_gerechten
+  label: Gerechten
+  create: all
+  match: "**/*"
+  templates:
+  - gerechten
+- type: directory
+  path: collections/_events
+  label: Events
+  create: all
+  match: "**/*"
+  templates:
+  - evenementen
+- type: directory
+  path: collections/_arrangementen
+  label: Arrangementen
+  create: all
+  match: "**/*"
+  templates:
+  - arrangementen
+upload_dir: assets/images
+public_path: "/assets/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - JEKYLL_ENV=staging
+  preview_output_directory: _site
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site

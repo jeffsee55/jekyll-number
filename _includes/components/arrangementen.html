@@ -1,0 +1,25 @@
+<div class="section-empty">
+    <div class="container content">
+        <hr class="space m" />
+
+        <div class="row" data-anima="fade-bottom" data-timeline="asc" data-timeline-time="200" data-ti>
+            {% assign arrangements_list = site.arrangementen | where:"lang", page.lang %}
+            {% for arrangementen in arrangements_list %}
+            <div class="col-md-4 anima">
+                <div class="advs-box advs-box-top-icon-img">
+                    <a class="img-box" href="{{ arrangementen.url }}">
+                        <span><img src="{{ arrangementen.image }}" alt="{{ arrangementen.imageAlt }}"></span>
+                    </a>
+                    <div class="advs-box-content">
+                        <h3><a href="{{ arrangementen.url }}">{{ arrangementen.title }}</a>
+                        </h3>
+                        <span class="extra-content">{{ arrangementen.category }}</span>
+                        <p>{{ arrangementen.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr class="space m" />
+</div>

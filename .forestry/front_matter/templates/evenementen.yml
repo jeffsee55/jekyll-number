@@ -1,0 +1,40 @@
+---
+label: Evenementen
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang-ref
+  label: lang-ref
+- type: datetime
+  name: eventDate
+  label: eventDate
+- type: text
+  name: description
+  label: description
+- type: list
+  name: category
+  label: category
+- type: file
+  name: image
+  label: image
+- type: file
+  name: headerImage
+  label: headerImage
+pages:
+- collections/_events/nl/heel-koggenland-zingt-hazes.md
+- collections/_events/nl/snertwandeling-1.md

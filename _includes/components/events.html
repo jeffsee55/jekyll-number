@@ -1,0 +1,25 @@
+<div class="section-empty">
+    <div class="container content">
+        <hr class="space m" />
+
+        <div class="row" data-anima="fade-bottom" data-timeline="asc" data-timeline-time="200" data-ti>
+            {% assign events_list = (site.events | where:"lang", page.lang) | sort: 'eventDate' %}
+            {% for events in events_list %}
+            <div class="col-md-4 anima">
+                <div class="advs-box advs-box-top-icon-img">
+                    <a class="img-box" href="{{ events.url }}">
+                        <span><img src="{{ events.image }}" alt="{{ events.imageAlt }}"></span>
+                    </a>
+                    <div class="advs-box-content">
+                        <h3><a href="{{ events.url }}">{{ events.title }}</a>
+                        </h3>
+                        <span class="extra-content">{{ events.eventDate | date: "%-d %B %Y" }}</span>
+                        <p>{{ events.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr class="space m" />
+</div>

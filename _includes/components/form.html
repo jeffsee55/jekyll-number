@@ -1,0 +1,84 @@
+<div class="section-empty section-item">
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-8 text-left">
+                <div class="title-base text-left text-left-sm">
+                    <hr />
+                    <h2>{{ site.data.translations['contactFormHeading'][page.lang] }}</h2>
+                    <p>{{ site.data.translations['contactFormSubHeading'][page.lang] }}</p>
+                </div>
+                <hr class="space s" />
+                <form action="https://www.enformed.io/hvzlvv37" class="form-box" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>{{ site.data.translations['name'][page.lang] }}</p>
+                            <input id="name" name="Naam" placeholder="" type="text" class="form-control form-value"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{ site.data.translations['email'][page.lang] }}</p>
+                            <input id="email" name="email" placeholder="" type="email" class="form-control form-value"
+                                required>
+                        </div>
+                    </div>
+                    <hr class="space xs" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>{{ site.data.translations['message'][page.lang] }}</p>
+                            <textarea id="messagge" name="Bericht" placeholder="" class="form-control form-value"
+                                required></textarea>
+                            <hr class="space s" />
+                            <button class="btn-xs btn" type="submit"><i
+                                    class="im-mail-send"></i>{{ site.data.translations['sendMessage'][page.lang] }}</button>
+                            <input type="hidden" name="*redirect" value="{{ site.url}}{{ page.url }}" />
+                            <input type="hidden" name="*formname" value="Contactformulier website}" />
+                            <input type="hidden" name="*reply" value="email" />
+                            <input type="hidden" name="*subject" value="Nieuw bericht via de website." />
+                            <input type="hidden" name="*honeypot" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>{{ site.data.translations['day'][page.lang] }}</th>
+                            <th>{{ site.data.translations['from'][page.lang] }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>{{ site.data.translations['monday'][page.lang] }}</th>
+                            <td>Gesloten</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['tuesday'][page.lang] }}</th>
+                            <td>Gesloten</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['wednesday'][page.lang] }}</th>
+                            <td>10.30</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['thursday'][page.lang] }}</th>
+                            <td>10.30</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['friday'][page.lang] }}</th>
+                            <td>10.30</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['saturday'][page.lang] }}</th>
+                            <td>10.30</td>
+                        </tr>
+                        <tr>
+                            <th>{{ site.data.translations['sunday'][page.lang] }}</th>
+                            <td>10.30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

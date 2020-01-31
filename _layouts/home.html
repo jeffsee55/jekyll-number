@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html  lang="{{ site.lang }}" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html lang="{{ site.lang }}">
+<!--<![endif]-->
+
+{%- include head.html -%}
+
+<body>
+
+  {%- include header.html -%}
+
+  <div class="section-bg-video grunge-border">
+    <div class="bg-overlay transparent-dark"></div>
+    <div class="header-title white homepage" data-parallax="scroll" data-bleed="0" data-position="top"
+      data-natural-height="850" data-natural-width="1920"
+      style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url({{ page.headerImage }})">
+      <!-- <video autoplay loop muted poster="../assets/images/video-1-poster.jpg">
+        <source src="../assets/images/video-1.mp4" type="video/mp4" />
+      </video> -->
+      <div class="container overlay-content white text-center vertical-center" data-anima="fade-top" data-timeline="asc"
+        data-time="1000">
+        <h5 class="text-uppercase anima">
+          {{ page.subHeading}}
+        </h5>
+        <h2 class="text-bold text-xxl anima">{{ page.heading }}</h2>
+        <hr class="space s" />
+        <p class="anima">
+          {{ page.headingDescription }}
+        </p>
+        <hr class="space s" />
+        <a href="reserveren" class="btn btn-border btn-sm anima anima-fade-bottom">{{ page.headingButton }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="section-empty">
+    <div class="container content">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 text-center-sm">
+          <div class="title-base text-left text-center-sm">
+            <hr />
+            <h2>{{ page.sectionOneHeading }}</h2>
+            <p>{{ page.sectionOneSubHeading }}</p>
+          </div>
+          <p>
+            {{ page.sectionOneText }}
+          </p>
+          <hr class="space s" />
+        </div>
+        <div class="col-md-6 col-sm-12 text-center-sm" data-anima="fade-right">
+          <hr class="space m visible-sm" />
+          <div class="img-box lightbox shadow-1">
+            <img src="{{ page.sectionOneImage }}" alt="{{ page.sectionOneImageAlt }}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- include components/tiles.html -%}
+  <div class="section-empty">
+    <div class="container content">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 text-center-sm" data-anima="fade-right">
+          <hr class="space m visible-sm" />
+          <div class="img-box lightbox shadow-1">
+            <img src="{{ page.sectionTwoImage }}" alt="{{ page.sectionTwoImageAlt }}" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-center-sm">
+          <div class="title-base text-left text-center-sm">
+            <hr />
+            <h2>{{ page.sectionTwoHeading }}</h2>
+            <p>{{ page.sectionTwoSubHeading }}</p>
+          </div>
+          <p>
+            {{ page.sectionTwoText }}
+          </p>
+          <hr class="space m" />
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- include components/booking-simple.html -%}
+  {%- include components/menu-short.html -%}
+  {%- include components/arrangementen-simple.html -%}
+  {%- include components/hours.html -%}
+  {%- include components/contact.html -%}
+  </div>
+  <i class="scroll-top scroll-top-mobile show fa fa-sort-asc"></i>
+
+  {%- include footer.html-%}
+</body>
+
+</html>

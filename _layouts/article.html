@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]> <html  lang="{{ site.lang }}" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html lang="{{ site.lang }}">
+<!--<![endif]-->
+
+{%- include head.html -%}
+
+<body>
+
+    {%- include header.html -%}
+
+    <div class="header-title ken-burn white"
+        style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ page.headerImage }});">
+        <div class="container">
+            <div class="title-base">
+                <hr class="anima" />
+                <p class="anima fade-top">{{ page.subtitle }}</p>
+                <h1 class="anima fade-top">{{ page.title }}</h1>
+                {% if page.collection == 'events' %}
+                <h3 class="text-uppercase anima fade-top">{{ page.eventDate | date: "%-d %B %Y" }}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="section-empty section-item">
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-9 col-sm-12">
+                    {{ page.content }}
+                    <hr class="space m" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group btn-group-icons" role="group">
+                                <a data-social="share-facebook" class="btn btn-default">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a data-social="share-twitter" class="btn btn-default">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a data-social="share-google" class="btn btn-default">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a data-social="share-linkedin" class="btn btn-default">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="tag-row">
+                                {% if page.collection == 'events' %}
+                                <span><i class="fa fa-calendar"></i>{{ page.eventDate | date: "%-d %B %Y" }}</span>
+                                {% endif %}
+                                <span><i class="fa fa-bookmark"></i>{{ page.category }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="space m" />
+                    <hr />
+                </div>
+                <div class="col-md-3 col-sm-12 widget">
+                    {%- include components/sidebar.html -%}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%- include components/form-simple.html -%}
+
+    <i class="scroll-top scroll-top-mobile show fa fa-sort-asc"></i>
+
+    {%- include footer.html-%}
+
+</body>
+
+</html>

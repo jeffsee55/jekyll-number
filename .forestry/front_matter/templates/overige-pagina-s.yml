@@ -1,0 +1,30 @@
+---
+label: Overige pagina's
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang-ref
+  label: lang-ref
+- type: text
+  name: heading
+  label: heading
+- type: text
+  name: subheading
+  label: subheading
+- type: file
+  name: headerImage
+  label: headerImage
+- type: text
+  name: permalink
+  label: permalink
+pages:
+- nl/pages/privacy-beleid.md

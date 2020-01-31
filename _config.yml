@@ -1,0 +1,65 @@
+title: Les Deux Ponts
+email: info@lesdeuxponts.nl
+description: >- # this means to ignore newlines until "baseurl:"
+  Eetcafé aan het water in Oudendijk
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://lesdeuxponts.nl"
+author: Les Deux Ponts
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-menus
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-webp
+
+# SEO
+social:
+  name: Les Deux Ponts
+  links:
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
+logo: "../assets/images/logo-2.png"
+
+google:
+  tag_manager:
+    container_id: GTM-KJSHRMJ
+
+# Collections
+collections_dir: collections
+collections:
+  gerechten:
+    output: true
+  arrangementen:
+    output: true
+    permalink: /:collection/:path/  
+  events:
+    output: true
+    permalink: /:collection/:path/ 
+
+# WebP
+webp:
+  enabled: true
+  quality: 100
+  img_dir: ["/assets/images"]
+  formats: [".jpeg", ".jpg", ".png", ".tiff"]
+  gifs: [".gif"]
+  regenerate: false
+  webp_path: nil
+  exclude: []
+
+# HTML Compression
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [all]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []

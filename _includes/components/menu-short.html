@@ -1,0 +1,32 @@
+<div class="section-empty">
+  <div class="container content">
+    <div class="title-base">
+      <hr />
+      <h2>{{ site.data.translations['shortMenuTitle'][page.lang] }}</h2>
+      <p>{{ site.data.translations['shortMenuSubTitle'][page.lang] }}</p>
+    </div>
+    <hr class="space s" />
+    <div class="row">
+      <div class="list-items">
+        {% assign dishes_list = site.gerechten | where:"lang", page.lang % | sample: 6 %}
+        {% for gerechten in dishes_list %}
+        <div class="list-item">
+          <div class="row">
+            <div class="col-md-9">
+              <h4>{{ gerechten.title }}</h4>
+              <p>{{ gerechten.category }} - {{ gerechten.tags }}</p>
+            </div>
+            <div class="col-md-3">
+              <span>{{ gerechten.price }}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <hr class="space l" />
+    <div class="text-center">
+      <a href="menu/" class="btn btn-sm">{{ site.data.translations['shortMenuButton'][page.lang] }}</a>
+    </div>
+  </div>
+</div>

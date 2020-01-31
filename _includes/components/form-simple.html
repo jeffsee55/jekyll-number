@@ -1,0 +1,48 @@
+<div class="section-bg-color">
+    <div class="container content">
+        <div class="row">
+            <div class="col-sm-4 text-left">
+                <hr class="space s" />
+                <div class="title-base text-left text-left-sm">
+                    <hr />
+                    <h2>{{ site.data.translations['contactFormHeading'][page.lang] }}</h2>
+                    <p>{{ site.data.translations['contactFormSubHeading'][page.lang] }}</p>
+                </div>
+                <hr class="space s" />
+            </div>
+            <div class="col-md-8 text-left">
+                <form action="https://www.enformed.io/hvzlvv37" class="form-box" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>{{ site.data.translations['name'][page.lang] }}</p>
+                            <input id="name" name="Naam" placeholder="" type="text" class="form-control form-value"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{ site.data.translations['email'][page.lang] }}</p>
+                            <input id="email" name="email" placeholder="" type="email" class="form-control form-value"
+                                required>
+                        </div>
+                    </div>
+                    <hr class="space xs" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>{{ site.data.translations['message'][page.lang] }}</p>
+                            <textarea id="messagge" name="Bericht" placeholder="" class="form-control form-value"
+                                required></textarea>
+                            <hr class="space s" />
+                            <button class="btn-xs btn" type="submit"><i
+                                    class="im-mail-send"></i>{{ site.data.translations['sendMessage'][page.lang] }}</button>
+                            <input type="hidden" name="*redirect" value="{{ site.url}}{{ page.url }}" />
+                            <input type="hidden" name="*formname" value="Contactformulier website" />
+                            <input type="hidden" name="*reply" value="email" />
+                            <input type="hidden" name="*subject" value="Nieuw bericht via de website." />
+                            <input type="hidden" name="*honeypot" />
+                        </div>
+                    </div>
+                </form>
+                <hr class="space s" />
+            </div>
+        </div>
+    </div>
+</div>

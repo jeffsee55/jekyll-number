@@ -1,0 +1,29 @@
+<div class="list-group list-blog">
+    {% if page.collection == 'events' %}
+    <p class="list-group-item active">{{ site.data.translations['sidebarEventsTitle'][page.lang] }}</p>
+    {% assign events_list = (site.events | where:"lang", page.lang) | sort: 'eventDate' %}
+    {% for events in events_list | limit: 5 %}
+    <div class="list-group-item">
+        <div class="tag-row icon-row"><span><i
+                    class="fa fa-calendar"></i>{{ events.eventDate | date: "%-d %B %Y" }}</span></div>
+        <a href="{{ events.url }}">
+            <h5>{{ events.title }}</h5>
+        </a>
+        <p>{{ events.description }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if page.collection == 'arrangementen' %}
+    <p class="list-group-item active">{{ site.data.translations['sidebarArrangementsTitle'][page.lang] }}</p>
+    {% assign arrangements_list = site.arrangementen | where:"lang", page.lang %}
+    {% for arrangementen in arrangementen_list | sample: 5 %}
+    <div class="list-group-item">
+        <a href="{{ arrangementen.url }}">
+            <h5>{{ arrangementen.title }}</h5>
+        </a>
+        <p>{{ arrangementen.description }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>

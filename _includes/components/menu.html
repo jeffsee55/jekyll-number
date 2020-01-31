@@ -1,0 +1,288 @@
+<div class="section-empty">
+    <div class="container content">
+        <div class="title-base">
+            <hr />
+            <h2>{{ site.data.translations['lunchTitle'][page.lang] }}</h2>
+            <!-- <p>{{ site.data.translations['lunchSubTitle'][page.lang] }}</p> -->
+        </div>
+        <hr class="space s" />
+        <div class="row">
+            <div class="list-items">
+                <h3>12-uurtje</h3>
+                <div class="list-item list-item-special">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>Gebakken eitje, van dobbe kroket, soepje, salade & 2 sneetjes brood</h4>
+                        </div>
+                        <div class="col-md-3">
+                            <span>12,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% assign dishes_list_lunch = site.gerechten | where:"lang", page.lang | sort: "price" %}
+        {% assign dishes_lunch = dishes_list_lunch | where: "category", "Lunch" %}
+        {% assign lunch_warm = dishes_lunch | where: "tags", "Warm" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Warm</h3>
+                {% for gerechten in lunch_warm %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign lunch_broodjes = dishes_lunch | where: "tags", "Broodjes" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Broodjes</h3>
+                {% for gerechten in lunch_broodjes %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign lunch_tosti = dishes_lunch | where: "tags", "Tosti's" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Tosti's</h3>
+                {% for gerechten in lunch_tosti %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign lunch_uitsmijters = dishes_lunch | where: "tags", "Uitsmijters" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Uitsmijters</h3>
+                {% for gerechten in lunch_uitsmijters %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign lunch_soepen = dishes_lunch | where: "tags", "Soepen" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Soepen</h3>
+                {% for gerechten in lunch_soepen %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign lunch_salades = dishes_lunch | where: "tags", "Salades" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Salades</h3>
+                {% for gerechten in lunch_salades %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr class="space m" />
+    </div>
+    <div class="container content">
+        <div class="title-base">
+            <hr />
+            <h2>{{ site.data.translations['dinerTitle'][page.lang] }}</h2>
+            <!-- <p>{{ site.data.translations['dinerSubTitle'][page.lang] }}</p> -->
+        </div>
+        <hr class="space s" />
+        {% assign dishes_list = site.gerechten | where:"lang", page.lang | sort: "price" %}
+        {% assign dishes_diner = dishes_list | where: "category", "Diner" %}
+        {% assign diner_voorgerechten = dishes_diner | where: "tags", "Voorgerechten" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Voorgerechten</h3>
+                {% for gerechten in diner_voorgerechten %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_soepen = dishes_diner | where: "tags", "Soepen" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Soepen</h3>
+                {% for gerechten in diner_soepen %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_hoofd = dishes_diner | where: "tags", "Hoofdgerechten" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Hoofdgerechten</h3>
+                {% for gerechten in diner_hoofd %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_salades = dishes_diner | where: "tags", "Salades" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Salades</h3>
+                {% for gerechten in diner_salades %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_pannenkoeken = dishes_diner | where: "tags", "Pannenkoeken" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Pannenkoeken</h3>
+                {% for gerechten in diner_pannenkoeken %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_kids = dishes_diner | where: "tags", "Kids" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Kids</h3>
+                {% for gerechten in diner_kids %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% assign diner_nagerechten = dishes_diner | where: "tags", "Nagerechten" %}
+        <div class="row">
+            <div class="list-items">
+                <h3>Nagerechten</h3>
+                {% for gerechten in diner_nagerechten %}
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>{{ gerechten.title }}</h4>
+                            <p>{{ gerechten.description }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span>{{ gerechten.price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr class="space l" />
+    </div>
+
+</div>

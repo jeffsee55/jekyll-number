@@ -1,0 +1,33 @@
+---
+label: Gerechten
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang-ref
+  label: lang-ref
+- type: text
+  name: description
+  label: description
+- name: price
+  type: number
+  label: price
+  default: 0
+  config:
+    min: '0'
+    max: 
+    step: '0.1'
+    required: false
+- type: text
+  name: category
+  label: category
+- name: tags
+  type: text
+  config:
+    required: false
+  label: sub-category

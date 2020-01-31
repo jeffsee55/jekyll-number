@@ -1,0 +1,34 @@
+---
+headerNL:
+- url: "/arrangementen/"
+  title: Arrangementen
+  weight: 1
+- url: "/events/"
+  title: Events
+  weight: 2
+- url: "/contact/"
+  title: Contact
+  weight: 3
+- url: "/reserveren/"
+  title: Reserveren
+  weight: 4
+- url: "/menu/"
+  title: Menu
+  weight: 5
+  identifier: item_bPZy1j4
+headerEN:
+- url: "/menu/"
+  title: Menu
+  weight: 5
+- url: "/arrangements/"
+  title: Arrangements
+  weight: 1
+- url: "/events/"
+  title: Events
+  weight: 2
+- url: "/contact/"
+  title: Contact
+  weight: 3
+- url: "/reservations/"
+  title: Reservations
+  weight: 4

@@ -1,0 +1,21 @@
+<div class="section-bg-color">
+  <div class=" container content">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="title-base text-left">
+          <hr />
+          <h2>{{ site.data.translations['reservationsTitle'][page.lang] }}</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>{{ site.data.translations['reservationsDescription'][page.lang] }}</p>
+      </div>
+      <div class="col-md-3">
+        <a href="{% if page.lang == 'nl' %}/nl/reserveren/{% else %}/en/reservations/{% endif %}">
+          <button class="btn-sm btn"><i
+              class="im-mail-send"></i>{{ site.data.translations['reservationsSubmit'][page.lang] }}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

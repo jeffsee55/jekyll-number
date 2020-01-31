@@ -1,0 +1,144 @@
+# General
+by:
+  en: by
+  door: door
+
+# Contact / booking related
+name:
+  en: Name
+  nl: Naam
+email:
+  en: Email
+  nl: E-mail
+phone:
+  en: Telephone
+  nl: Telefoon
+message:
+  en: Message
+  nl: Bericht
+sendMessage:
+  en: Send message
+  nl: Verstuur bericht
+contactFormHeading:
+  en: We'd love to hear from you!
+  nl: We horen graag van je!
+contactFormSubHeading:
+  en: Questions or suggestions?
+  nl: Vragen of opmerkingen
+reservationsAmount:
+  en: Amount of persons
+  nl: Aantal personen
+reservationsDate:
+  en: Date
+  nl: Datum
+reservationsTime:
+  en: Time
+  nl: Tijdstip
+reservationsSubmit:
+  en: Make reservation
+  nl: Reserveren
+formMessage:
+  en: Message
+  nl: Bericht
+
+# Map
+mapTitle:
+  en: Contact
+  nl: Contact
+mapDescription:
+  en: We'd love to see you around sometime!
+  nl: We zien je graag een keer bij ons in het café!
+mapInfo:
+  en: Information
+  nl: Gegevens
+
+# Opening Hours
+day:
+  en: Day
+  nl: Dag
+from:
+  en: From
+  nl: Vanaf
+monday:
+  en: Monday
+  nl: Maandag
+tuesday:
+  en: Tuesday
+  nl: Dinsdag
+wednesday:
+  en: Wednesday
+  nl: Woensdag
+thursday:
+  en: Thursday
+  nl: Donderdag
+friday:
+  en: Friday
+  nl: Vrijdag
+saturday:
+  en: Saturday
+  nl: Zaterdag
+sunday:
+  en: Sunday
+  nl: Zondag
+closed:
+  en: Closed
+  nl: Gesloten
+visit:
+  en: Visit our cafe!
+  nl: Kom langs!
+
+# Reservations
+reservationsTitle:
+  en: Make a reservation
+  nl: Reserveren
+reservationsDescription:
+  en: Join us for a nice and cosy diner
+  nl: Kom gezellig een keer bij ons eten. Geniet van de heerlijkste gerechten op een bijzondere locatie.
+warning:
+  en: Beware!
+  nl: Let op!
+
+# Menu
+shortMenuTitle:
+  en: A fragment of our menu
+  nl: Een greep uit ons menu
+shortMenuSubTitle:
+  en: Fresh and unique
+  nl: Vers en uniek
+shortMenuButton:
+  en: View the full menu
+  nl: Bekijk het volledige menu
+lunchTitle:
+  en: Lunch
+  nl: Lunch
+lunchSubTitle:
+  en: Fresh and unique
+  nl: Vers en uniek
+dinerTitle:
+  en: Diner
+  nl: Diner
+dinerSubTitle:
+  en: Fresh and unique
+  nl: Vers en uniek
+drinksTitle:
+  en: Drinks
+  nl: Dranken
+drinksSubTitle:
+  en: Fresh and unique
+  nl: Vers en uniek
+desertTitle:
+  en: Deserts
+  nl: Nagerechten
+desertSubTitle:
+  en: Fresh and unique
+  nl: Vers en uniek
+
+# Events
+sidebarEventsTitle:
+  en: Latest events
+  nl: Laatste events
+
+# Arrangements
+sidebarArrangementsTitle:
+  en: Other arrangements
+  nl: Andere arrangementen
