@@ -3,7 +3,7 @@ title: 'Broodje pulled pork '
 description: 'Met huisgemaakte BBQ-saus '
 lang: en
 lang-ref: ''
-price: 8.00
+price: '9'
 category: Lunch
 tags: Warm
 
