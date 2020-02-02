@@ -3,7 +3,7 @@ title: Salade oosterse kip
 description: Met gewokte groenten en kerriemayonaise
 lang: en
 lang-ref: ''
-price: 11.00
+price: '12'
 category: Diner
 tags: Salades
 
