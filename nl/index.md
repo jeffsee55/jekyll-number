@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Les Deux Ponts
+title: Les Deux Pont
 lang: nl
 lang-ref: index
 image: "/assets/images/WhatsApp-Image-2019-12-12-at-16.12.03.jpeg"
