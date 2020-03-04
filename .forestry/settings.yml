@@ -39,7 +39,7 @@ sections:
   match: "**/*"
   templates:
   - arrangementen
-upload_dir: staging
+upload_dir: uploads
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: 
