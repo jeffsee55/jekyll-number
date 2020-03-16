@@ -1,5 +1,5 @@
 ---
-block2: []
+block2: nl/pages/arrangementen.md
 title: Hello World
 blocks:
 - template: menu
