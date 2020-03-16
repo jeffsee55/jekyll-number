@@ -27,3 +27,5 @@ fields:
       file: 
       path: 
   label: Block2
+pages:
+- blogs/hello-world.md
