@@ -126,5 +126,6 @@ fields:
   name: sectionTwoImageAlt
   label: sectionTwoImageAlt
 pages:
+- en/c-est-l-arrivée-de-l-été.md
 - en/ok-helllo-there.md
 - nl/index.md
