@@ -126,4 +126,5 @@ fields:
   name: sectionTwoImageAlt
   label: sectionTwoImageAlt
 pages:
+- en/c-est-l-arrivee-de-l-ete.md
 - nl/index.md
